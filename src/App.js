@@ -1,12 +1,12 @@
 import "./App.css";
-import Button from "react-bootstrap/Button";
+import Weather from "./Weather";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h2>Weather App</h2>
-        <Button variant="primary">Primary</Button>
+        <Weather />
+
         <footer>
           <p>
             Open sourced code by: Bhing Rudenas on{" "}
