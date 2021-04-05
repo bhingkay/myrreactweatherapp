@@ -10,6 +10,7 @@ export default function App() {
           <a
             href="https://github.com/bhingkay/myrreactweatherapp"
             target="_blank"
+            rel="noreferrer"
           >
             Github
           </a>
