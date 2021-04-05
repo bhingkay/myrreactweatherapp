@@ -1,3 +1,17 @@
 .App {
   text-align: center;
+  border: 2px solid rgb(83, 79, 79);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+footer {
+  text-align: left;
+}
+
+a {
+  margin: 0 auto;
 }
