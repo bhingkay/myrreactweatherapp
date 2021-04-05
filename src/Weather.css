@@ -1,10 +1,11 @@
 .Weather {
   border: 2px solid rgb(83, 79, 79);
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   margin-top: 20px;
   padding-left: 10px;
+  padding: 10px;
 }
 
 li {
@@ -12,4 +13,29 @@ li {
   margin-left: -40px;
 
   line-height: 18px;
+}
+
+.Weather .inputCity {
+  width: 260px;
+}
+
+.Weather .btnprimary {
+  margin-left: 40px;
+}
+
+.Weather .currentbtn {
+}
+
+strong {
+  color: brown;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -20px;
 }
