@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 import Button from "react-bootstrap/Button";
 import Loader from "react-loader-spinner";
 
@@ -14,7 +15,7 @@ export default function Weather(props) {
     setWeatherData({
       temperature: response.data.main.temp,
       city: response.data.name,
-      date: "Sunday 12:00",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
@@ -49,7 +50,9 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
@@ -73,8 +76,8 @@ export default function Weather(props) {
           </div>
           <div className="col-6">
             <ul>
-              <li>Humidity:{weatherData.humidity}%</li>
-              <li>Wind:{weatherData.wind} km/h</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind} km/h</li>
             </ul>
           </div>
         </div>
@@ -87,7 +90,7 @@ export default function Weather(props) {
 
     return (
       <div className="loader">
-        <Loader type="BallTrianglef" color="#00BFFF" height={100} width={100} />
+        <Loader type="BallTriangle" color="#00BFFF" height={100} width={100} />
       </div>
     );
   }
