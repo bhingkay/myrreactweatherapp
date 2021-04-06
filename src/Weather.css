@@ -1,4 +1,7 @@
 .Weather {
+  background-image: url("./img/background.jpg");
+  background-size: cover;
+  height: 500px;
   border: 2px solid rgb(83, 79, 79);
   border-radius: 10px;
   margin: 0 auto;
@@ -10,12 +13,14 @@
   font-size: 36px;
   margin-bottom: 0px;
   margin-top: 10px;
+  color: rgb(242, 245, 50);
 }
 li {
   list-style: none;
   margin-left: -40px;
   line-height: 18px;
-  color: rgb(33, 33, 33);
+  color: rgb(244, 245, 241);
+  font-size: 18px;
 }
 
 .Weather .inputCity {
@@ -36,7 +41,7 @@ li {
 }
 
 .Weather .temperature {
-  color: brown;
+  color: rgb(242, 245, 50);
   font-size: 46px;
   height: 64px;
   line-height: 1;

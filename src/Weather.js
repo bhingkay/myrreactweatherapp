@@ -1,8 +1,17 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 import Button from "react-bootstrap/Button";
 
-export default function Weather() {
+export default function Weather(props) {
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
+  const apiId = "a1436310c1d8f47f9c04f28cd4c73311";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultcity}&appid=${apiId}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="Weather">
       <form>
