@@ -1,41 +1,52 @@
 .Weather {
   border: 2px solid rgb(83, 79, 79);
   border-radius: 10px;
-  max-width: 600px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-left: 10px;
-  padding: 10px;
+  padding: 20px 20px;
 }
-
+.Weather h1 {
+  font-size: 36px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
 li {
   list-style: none;
   margin-left: -40px;
-
   line-height: 18px;
+  color: rgb(33, 33, 33);
 }
 
 .Weather .inputCity {
-  width: 260px;
+  width: 300px;
 }
 
 .Weather .btnprimary {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .Weather .currentbtn {
 }
 
-strong {
+.Weather img {
+  width: 64px;
+  height: 70px;
+  margin-top: -8px;
+}
+
+.Weather .temperature {
   color: brown;
   font-size: 46px;
+  height: 64px;
   line-height: 1;
   font-weight: 400;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .units {
   position: relative;
   font-size: 16px;
   top: -20px;
+  left: -10px;
 }
