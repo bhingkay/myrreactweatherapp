@@ -11,7 +11,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultcity);
 
   function handleResponse(response) {
-    console.log(response.data);
+    //console.log(response.data);
 
     setWeatherData({
       temperature: response.data.main.temp,
@@ -41,35 +41,39 @@ export default function Weather(props) {
   }
   if (ready) {
     return (
-      <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-6">
-              <input
-                type="search"
-                placeholder="Type a city"
-                autoFocus="off"
-                className="inputCity form-control"
-                onChange={handleCityChange}
-              />
+      <div
+        className={weatherData.temperature > 16 ? "Weather warm" : "Weather"}
+      >
+        <main>
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-6">
+                <input
+                  type="search"
+                  placeholder="Type a city"
+                  autoFocus="off"
+                  className="inputCity form-control"
+                  onChange={handleCityChange}
+                />
+              </div>
+              <div className="col-3">
+                <Button
+                  variant="primary"
+                  className="btnprimary"
+                  onClick={handleSubmit}
+                >
+                  Search
+                </Button>{" "}
+              </div>
+              <div className="col-3">
+                <Button variant="success" className="currentbtn">
+                  Current
+                </Button>{" "}
+              </div>
             </div>
-            <div className="col-3">
-              <Button
-                variant="primary"
-                className="btnprimary"
-                onClick={handleSubmit}
-              >
-                Search
-              </Button>{" "}
-            </div>
-            <div className="col-3">
-              <Button variant="success" className="currentbtn">
-                Current
-              </Button>{" "}
-            </div>
-          </div>
-        </form>
-        <WeatherInfo data={weatherData} />
+          </form>
+          <WeatherInfo data={weatherData} />
+        </main>
       </div>
     );
   } else {

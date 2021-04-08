@@ -1,5 +1,5 @@
 .Weather {
-  background-image: url("./img/background.jpg");
+  background-image: url("./img/cold.jpg");
   background-size: cover;
   height: 500px;
   border: 2px solid rgb(83, 79, 79);
@@ -9,6 +9,25 @@
   padding-left: 10px;
   padding: 20px 20px;
 }
+
+.Weather.warm {
+  background-image: url("./img/warm.jpg");
+}
+main {
+  height: 500px;
+  width: 560px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.5)
+  );
+  border-radius: 10px;
+  margin-top: -21px;
+  margin-left: -20px;
+  display: block;
+  padding: 20px 20px;
+}
+
 .Weather h1 {
   font-size: 36px;
   margin-bottom: 0px;
@@ -25,6 +44,10 @@ li {
 
 .Weather .inputCity {
   width: 300px;
+
+  border-radius: 0px 0px 16px 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .Weather .btnprimary {
