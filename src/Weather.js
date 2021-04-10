@@ -12,13 +12,13 @@ export default function Weather(props) {
 
   function handleResponse(response) {
     //console.log(response.data);
-    // console.log(response.data.weather[0].icon);
+    console.log(response.data.weather[0].icon);
 
     setWeatherData({
       temperature: response.data.main.temp,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
