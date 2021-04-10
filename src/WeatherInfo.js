@@ -14,10 +14,7 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-6">
           <div className="d-flex weather-temperature">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-              alt="mostly cloudy"
-            />
+            <img src={props.data.iconUrl} />
 
             <div className="float-left">
               <strong className="temperature">
