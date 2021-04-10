@@ -30,9 +30,11 @@ main {
 
 .Weather h1 {
   font-size: 36px;
+  font-weight: 500;
   margin-bottom: 0px;
   margin-top: 10px;
-  color: rgb(242, 245, 50);
+  color: #ffff;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 li {
   list-style: none;
@@ -40,11 +42,12 @@ li {
   line-height: 20px;
   color: rgb(244, 245, 241);
   font-size: 18px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
 .Weather .inputCity {
   width: 300px;
-  border-radius: 0px 0px 16px 16px;
+  border-radius: 0px 16px 16px 16px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
 }
@@ -61,18 +64,19 @@ li {
 }
 
 .Weather .temperature {
-  color: rgb(242, 245, 50);
+  color: rgba(247, 236, 95, 0.925);
   font-size: 58px;
   line-height: 1;
   font-weight: 400;
   margin-left: 10px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
 .units {
   position: relative;
   font-size: 16px;
-  top: -20px;
-  left: -5px;
+  top: -30px;
+  left: -15px;
 }
 
 .loader {
