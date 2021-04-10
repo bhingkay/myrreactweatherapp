@@ -73,6 +73,7 @@ li {
 }
 
 .units {
+  color: #ffff;
   position: relative;
   font-size: 16px;
   top: -30px;
