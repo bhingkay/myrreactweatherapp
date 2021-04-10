@@ -11,12 +11,13 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultcity);
 
   function handleResponse(response) {
-    //console.log(response.data);
+    console.log(response.data);
     console.log(response.data.weather[0].icon);
 
     setWeatherData({
       temperature: response.data.main.temp,
       city: response.data.name,
+      country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
@@ -26,9 +27,13 @@ export default function Weather(props) {
     setReady(true);
   }
   function Search() {
-    const apiId = "a1436310c1d8f47f9c04f28cd4c73311";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiId}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    if (city !== "") {
+      const apiId = "a1436310c1d8f47f9c04f28cd4c73311";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiId}&units=metric`;
+      axios.get(apiUrl).then(handleResponse);
+    } else {
+      alert("Please check your spelling");
+    }
   }
 
   function handleSubmit(event) {
