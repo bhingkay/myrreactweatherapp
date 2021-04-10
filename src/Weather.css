@@ -46,17 +46,17 @@ li {
 }
 
 .Weather .inputCity {
+  font-weight: bold;
   width: 300px;
   border-radius: 0px 16px 16px 16px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out;
 }
 
 .Weather .btnprimary {
   margin-left: 50px;
-}
-
-.Weather .currentbtn {
+  transition: 0.4s ease-in-out;
 }
 
 .Weather canvas {

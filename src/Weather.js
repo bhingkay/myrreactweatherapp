@@ -41,6 +41,7 @@ export default function Weather(props) {
     event.preventDefault();
     setCity(event.target.value);
   }
+
   if (ready) {
     return (
       <div
@@ -53,7 +54,7 @@ export default function Weather(props) {
                 <input
                   type="search"
                   placeholder="Type a city"
-                  autoFocus="off"
+                  autoFocus="on"
                   className="inputCity form-control"
                   onChange={handleCityChange}
                 />
